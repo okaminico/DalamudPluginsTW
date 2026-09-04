@@ -128,5 +128,30 @@
     "DownloadLinkInstall": "https://github.com/okaminico/AutoDuty-1/releases/download/AutoDuty-v7.15.1.4-twfix3/latest.zip",
     "DownloadLinkUpdate": "https://github.com/okaminico/AutoDuty-1/releases/download/AutoDuty-v7.15.1.4-twfix3/latest.zip",
     "Changelog": "修正「打完副本不會自動離開」：結算選單不再每幀重複呼叫 Show()，避免可能打斷它自己的載入流程。若仍卡住麻煩回報，診斷記錄已加強。"
+  },
+  {
+    "Author": "okaminico (based on ffxiv-tc-port's fork of BossMod Reborn)",
+    "Name": "Bossmod Reborn",
+    "InternalName": "BossModReborn",
+    "AssemblyVersion": "7.15.0.1",
+    "Description": "提供 Boss 戰雷達、自動循環、冷卻計劃與 AI 功能，幫助您輕鬆應對各種 Boss 機制。\n\n本版本新增兩個模組：E4S 泰坦(伊甸零式：光影1，OID/AID 已用遊戲內確認)、極月讀(The Wreath of Snakes Extreme，從社群國服版移植，尚未實機測試)。",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/okaminico/BossmodReborn",
+    "DalamudApiLevel": 13,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "ImageUrls": [
+      "https://raw.githubusercontent.com/awgil/ffxiv_bossmod/master/Data/image1.png",
+      "https://raw.githubusercontent.com/awgil/ffxiv_bossmod/master/Data/image2.png",
+      "https://raw.githubusercontent.com/awgil/ffxiv_bossmod/master/Data/image3.png"
+    ],
+    "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/DalamudPluginsTC/main/icons/BossModReborn.png",
+    "Punchline": "不再因副本機制失誤（台服修正版，新增 E4S 泰坦、極月讀模組）",
+    "AcceptsFeedback": true,
+    "DownloadLinkInstall": "https://github.com/okaminico/BossmodReborn/releases/download/BossModReborn-v7.15.0.1-autosync/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/BossmodReborn/releases/download/BossModReborn-v7.15.0.1-autosync/latest.zip",
+    "Changelog": "自動合併 ffxiv-tc-port/BossmodReborn 上游更新（2026-09-04）。"
   }
 ]

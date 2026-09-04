@@ -36,7 +36,8 @@ jobs:
             "https://raw.githubusercontent.com/okaminico/NotificationMaster/tw-fix/repo.json",
             "https://raw.githubusercontent.com/okaminico/Questionable-1/tw-fix/repo.json",
             "https://raw.githubusercontent.com/okaminico/TataruPraise/tw-fix/repo.json",
-            "https://raw.githubusercontent.com/okaminico/AutoDuty-1/tw-fix/repo.json"
+            "https://raw.githubusercontent.com/okaminico/AutoDuty-1/tw-fix/repo.json",
+            "https://raw.githubusercontent.com/okaminico/BossmodReborn/tw-fix/repo.json"
           )
 
           $all = @()

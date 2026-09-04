@@ -1,0 +1,132 @@
+[
+  {
+    "Author": "okaminico (based on ffxiv-tc-port's fork of NightmareXIV/Lifestream)",
+    "Name": "Lifestream",
+    "InternalName": "Lifestream",
+    "AssemblyVersion": "7.15.0.3",
+    "Description": "- 一鍵傳送至任何世界或以太之光目的地\n- 點擊區域地圖上的以太之光即可傳送過去\n\n本版本修正了台服(TC)無法正確解析以太之光目的地名稱的問題。",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/okaminico/Lifestream-1",
+    "Tags": [
+      "teleport",
+      "aethernet",
+      "world",
+      "travel"
+    ],
+    "CategoryTags": [
+      "Utility"
+    ],
+    "DalamudApiLevel": 13,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "加速以太之光移動與跨世界旅行的插件(台服修正版)。",
+    "AcceptsFeedback": false,
+    "DownloadLinkInstall": "https://github.com/okaminico/Lifestream-1/releases/download/Lifestream-v7.15.0.3/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/Lifestream-1/releases/download/Lifestream-v7.15.0.3/latest.zip",
+    "Changelog": "修正以太之光傳送目的地名稱查詢邏輯，改為優先讀取遊戲當下實際的資料表（不管客戶端語言為何都能正確比對），解決台服「Destination could not be found」導致傳送卡住的問題。"
+  },
+  {
+    "Author": "okaminico (based on ffxiv-tc-port's fork of Infiziert90/NotificationMaster)",
+    "Name": "NotificationMaster",
+    "InternalName": "NotificationMaster",
+    "AssemblyVersion": "7.15.0.19",
+    "Description": "在遊戲視窗縮到最小時，通知你各種遊戲內事件（副本排到、準備確認、聊天訊息、接近地圖標記等）。\n\n本版本新增「抵達（vnavmesh）」通知模組：vnavmesh 完成一次自動導航（不限地圖標記，Questionable 等外掛觸發的導航也算）就會通知，可搭配 TataruPraise（塔塔露誇獎）語音提醒。",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/okaminico/NotificationMaster",
+    "Tags": [
+      "notification",
+      "voice",
+      "vnavmesh",
+      "background"
+    ],
+    "CategoryTags": [
+      "Utility"
+    ],
+    "DalamudApiLevel": 13,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "遊戲在背景時的各種事件通知（台服修正版，新增 vnavmesh 抵達通知）。",
+    "AcceptsFeedback": false,
+    "DownloadLinkInstall": "https://github.com/okaminico/NotificationMaster/releases/download/NotificationMaster-v7.15.0.19-twfix1/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/NotificationMaster/releases/download/NotificationMaster-v7.15.0.19-twfix1/latest.zip",
+    "Changelog": "新增「抵達（vnavmesh）」通知模組，修正原本「抵達」情境完全沒有觸發來源的問題，並補上繁體中文翻譯。"
+  },
+  {
+    "Author": "okaminico (based on ffxiv-tc-port's fork of liza/Questionable)",
+    "Name": "Questionable",
+    "InternalName": "Questionable",
+    "AssemblyVersion": "7.15.0.9",
+    "Description": "自動接取並完成任務，使用 navmesh 自動走路到任務座標並嘗試自動完成沿路的步驟(不含副本、單人任務、戰鬥)。\n\n本版本修正了「卡住時自動重新整理任務步驟」功能，新增「攻頂乙太水晶連續中斷重試 3 次後微幅調整位置」，把移動卡住的反應時間從寫死 5 秒改成可調、預設 2.5 秒，補回官方上游有、但台服版一直缺少的 477 個任務資料檔案，並補上其中 28 個釣魚任務步驟缺少的執行邏輯(需搭配 AutoHook 外掛)。",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/okaminico/Questionable-1",
+    "Tags": [
+      "quest",
+      "leveling",
+      "automation",
+      "navmesh"
+    ],
+    "CategoryTags": [
+      "Automation"
+    ],
+    "DalamudApiLevel": 13,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "自動完成任務的小助手(台服修正版，含卡住自動恢復)。",
+    "AcceptsFeedback": false,
+    "DownloadLinkInstall": "https://github.com/okaminico/Questionable-1/releases/download/Questionable-v7.15.0.9-twfix9/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/Questionable-1/releases/download/Questionable-v7.15.0.9-twfix9/latest.zip",
+    "Changelog": "補上 28 個釣魚任務步驟缺少的執行邏輯(需搭配 AutoHook 外掛，沒裝的話這部分不會動作，不影響其他任務)。"
+  },
+  {
+    "Author": "okaminico (based on ffxiv-tc-port's fork of TataruPraise)",
+    "Name": "塔塔露誇獎",
+    "InternalName": "TataruPraise",
+    "AssemblyVersion": "7.20.0.2",
+    "Description": "遊戲裡發生事情的時候，用塔塔露的聲音喊一句極短的提示——「完美收工！」「後面！」「排到了！」。不是要太多對話，只是要有聲音。每個情境一句、全部 8 個字以內，情境有副本完成／升等／登入／Gil 里程碑／血量低／背後有人／收到密語／副本排到／組隊邀請／交易請求等，各自獨立開關（預設全部關閉）。播的是事先合成好的語音檔，執行期完全不連網。語音來自本機的 GPT-SoVITS 橋接（預設 http://127.0.0.1:9882），沒有橋接就只是不出聲，不會卡遊戲。設定視窗可以直接編輯每個情境的短句；資訊列上有一格，點一下切換總開關。指令 /tataru 開啟設定視窗，/tataru test 試播一句。\n\n本版本修正了離開等級壓制的副本／大型任務時，明明只是恢復原本等級卻被誤判成升等而喊出語音的問題。",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/okaminico/TataruPraise",
+    "Tags": [
+      "TC",
+      "Audio",
+      "TTS",
+      "Fun"
+    ],
+    "DalamudApiLevel": 13,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/DalamudPluginsTC/main/icons/TataruPraise.png",
+    "Punchline": "遊戲裡有事發生就喊一句極短提示（台服修正版，修正等級壓制誤判升等）。",
+    "AcceptsFeedback": false,
+    "DownloadLinkInstall": "https://github.com/okaminico/TataruPraise/releases/download/TataruPraise-v7.20.0.2-autosync/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/TataruPraise/releases/download/TataruPraise-v7.20.0.2-autosync/latest.zip",
+    "Changelog": "自動合併 ffxiv-tc-port/TataruPraise 上游更新（2026-09-03）。"
+  },
+  {
+    "Author": "okaminico (based on ffxiv-tc-port's fork of AutoDuty)",
+    "Name": "AutoDuty",
+    "InternalName": "AutoDuty",
+    "AssemblyVersion": "7.15.1.3",
+    "Description": "自動幫你跑副本，支援信賴的同伴、達人指引、士官兵團、多變或一般模式。需搭配 BossModReborn、vnavmesh 與一款戰鬥循環插件（WrathCombo 或 BossMod AutoRotation）使用。\n\n本版本修正了《巴哈姆特禁欲者(邂逅篇)》Turn 3 走路會卡住的問題，並針對「打完副本不會自動離開」新增診斷記錄，正在排查中。",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/okaminico/AutoDuty-1",
+    "DalamudApiLevel": 13,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/DalamudPluginsTC/main/icons/AutoDuty.png",
+    "Punchline": "自動跑本，解放雙手（台服修正版，修正巴哈姆特邂逅之章3卡住）。",
+    "AcceptsFeedback": true,
+    "DownloadLinkInstall": "https://github.com/okaminico/AutoDuty-1/releases/download/AutoDuty-v7.15.1.3-twfix2/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/AutoDuty-1/releases/download/AutoDuty-v7.15.1.3-twfix2/latest.zip",
+    "Changelog": "「打完副本不會自動離開」問題新增診斷記錄（尚未修正，需要 Debug 等級記錄檔才能確定卡在哪一步）。"
+  }
+]

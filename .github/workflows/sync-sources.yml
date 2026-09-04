@@ -1,0 +1,83 @@
+name: Sync Source Feeds
+
+# 每天重新抓這 5 個個人修正版各自的 repo.json，合併成這裡的統一 repo.json。
+# 來源那邊的每日自動同步（各自的 sync-upstream.yml）跑完之後，版本號／下載連結會自動反映到這裡，
+# 不用手動一個一個更新。純粹合併資料，不涉及編譯，所以沒有「合併衝突」或「建置失敗」這種問題──
+# 唯一會失敗的情況是某個來源網址暫時抓不到，那種情況直接整個跳過這次、保留現有內容。
+
+on:
+  schedule:
+    - cron: '30 18 * * *' # 每天 UTC 18:30（台灣時間 02:30，晚半小時給各來源自己的每日同步先跑完）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch and merge source feeds
+        id: merge
+        shell: pwsh
+        run: |
+          $sources = @(
+            "https://raw.githubusercontent.com/okaminico/Lifestream-1/tw-fix/repo.json",
+            "https://raw.githubusercontent.com/okaminico/NotificationMaster/tw-fix/repo.json",
+            "https://raw.githubusercontent.com/okaminico/Questionable-1/tw-fix/repo.json",
+            "https://raw.githubusercontent.com/okaminico/TataruPraise/tw-fix/repo.json",
+            "https://raw.githubusercontent.com/okaminico/AutoDuty-1/tw-fix/repo.json"
+          )
+
+          $all = @()
+          foreach ($url in $sources) {
+            try {
+              $content = Invoke-RestMethod -Uri $url -TimeoutSec 20
+              $all += $content
+            } catch {
+              Write-Host "::error::抓取 $url 失敗：$($_.Exception.Message)"
+              "status=fetch_failed" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+              exit 0
+            }
+          }
+
+          if ($all.Count -ne $sources.Count) {
+            Write-Host "::error::預期 $($sources.Count) 筆，實際拿到 $($all.Count) 筆，中止這次同步"
+            "status=count_mismatch" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            exit 0
+          }
+
+          $before = ""
+          if (Test-Path repo.json) { $before = Get-Content -Raw repo.json }
+          $after = $all | ConvertTo-Json -Depth 10 -AsArray
+
+          if ($before.Trim() -eq $after.Trim()) {
+            "status=nochange" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          } else {
+            $after | Set-Content -Path repo.json -Encoding utf8
+            "status=changed" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          }
+
+      - name: Commit and push
+        if: steps.merge.outputs.status == 'changed'
+        run: |
+          git add repo.json
+          git commit -m "Auto-sync source feeds ($(Get-Date -Format 'yyyy-MM-dd'))"
+          git push origin main
+        shell: pwsh
+
+      - name: Report failure
+        if: steps.merge.outputs.status == 'fetch_failed' || steps.merge.outputs.status == 'count_mismatch'
+        run: |
+          echo "::error::同步未完成（${{ steps.merge.outputs.status }}），保留現有 repo.json 不變，需要人工看一下"
+          exit 1

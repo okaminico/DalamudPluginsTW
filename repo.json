@@ -31,7 +31,7 @@
     "Author": "okaminico (based on ffxiv-tc-port's fork of Infiziert90/NotificationMaster)",
     "Name": "NotificationMaster",
     "InternalName": "NotificationMaster",
-    "AssemblyVersion": "7.15.0.20",
+    "AssemblyVersion": "7.15.0.21",
     "Description": "在遊戲視窗縮到最小時，通知你各種遊戲內事件（副本排到、準備確認、聊天訊息、接近地圖標記等）。\n\n本版本新增「抵達（vnavmesh）」通知模組：vnavmesh 完成一次自動導航（不限地圖標記，Questionable 等外掛觸發的導航也算）就會通知，可搭配 TataruPraise（塔塔露誇獎）語音提醒。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/okaminico/NotificationMaster",
@@ -51,15 +51,15 @@
     "LoadPriority": 0,
     "Punchline": "遊戲在背景時的各種事件通知（台服修正版，新增 vnavmesh 抵達通知）。",
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/okaminico/NotificationMaster/releases/download/NotificationMaster-v7.15.0.20-autosync/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/NotificationMaster/releases/download/NotificationMaster-v7.15.0.20-autosync/latest.zip",
-    "Changelog": "自動合併 ffxiv-tc-port/NotificationMaster 上游更新（2026-09-05，同步到 tc-7.20）。"
+    "DownloadLinkInstall": "https://github.com/okaminico/NotificationMaster/releases/download/NotificationMaster-v7.15.0.21-autosync/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/NotificationMaster/releases/download/NotificationMaster-v7.15.0.21-autosync/latest.zip",
+    "Changelog": "自動合併 ffxiv-tc-port/NotificationMaster 上游更新（2026-09-05）。"
   },
   {
     "Author": "okaminico (based on ffxiv-tc-port's fork of liza/Questionable)",
     "Name": "Questionable",
     "InternalName": "Questionable",
-    "AssemblyVersion": "7.15.0.11",
+    "AssemblyVersion": "7.15.0.12",
     "Description": "自動接取並完成任務，使用 navmesh 自動走路到任務座標並嘗試自動完成沿路的步驟(不含副本、單人任務、戰鬥)。\n\n本版本修正了「卡住時自動重新整理任務步驟」功能，新增「攻頂乙太水晶連續中斷重試 3 次後微幅調整位置」，把移動卡住的反應時間從寫死 5 秒改成可調、預設 2.5 秒，補回官方上游有、但台服版一直缺少的 477 個任務資料檔案，並補上其中 28 個釣魚任務步驟缺少的執行邏輯(需搭配 AutoHook 外掛)。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/okaminico/Questionable-1",
@@ -79,9 +79,9 @@
     "LoadPriority": 0,
     "Punchline": "自動完成任務的小助手(台服修正版，含卡住自動恢復)。",
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/okaminico/Questionable-1/releases/download/Questionable-v7.15.0.11-autosync/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/Questionable-1/releases/download/Questionable-v7.15.0.11-autosync/latest.zip",
-    "Changelog": "修正「飛行途中對 NPC 互動」的問題：飛到目標上空但尚未降落就嘗試互動時，遊戲會回報「飛行中無法進行該操作」導致卡住。現在互動前若偵測到還在飛行中，會自動降落(必要時再下坐騎)後重試，不論哪個任務、哪個 NPC 都適用；另外補上任務 1554《王在頂端沉睡》兩個步驟原本遺漏的降落設定。"
+    "DownloadLinkInstall": "https://github.com/okaminico/Questionable-1/releases/download/Questionable-v7.15.0.12-autosync/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/Questionable-1/releases/download/Questionable-v7.15.0.12-autosync/latest.zip",
+    "Changelog": "自動合併 ffxiv-tc-port/Questionable 上游更新（2026-09-05）。"
   },
   {
     "Author": "okaminico (based on ffxiv-tc-port's fork of TataruPraise)",
@@ -113,7 +113,7 @@
     "Author": "okaminico (based on ffxiv-tc-port's fork of AutoDuty)",
     "Name": "AutoDuty",
     "InternalName": "AutoDuty",
-    "AssemblyVersion": "7.15.1.5",
+    "AssemblyVersion": "7.15.1.6",
     "Description": "自動幫你跑副本，支援信賴的同伴、達人指引、士官兵團、多變或一般模式。需搭配 BossModReborn、vnavmesh 與一款戰鬥循環插件（WrathCombo 或 BossMod AutoRotation）使用。\n\n本版本修正了《巴哈姆特禁欲者(邂逅篇)》Turn 3 走路會卡住的問題，並修正了「打完副本不會自動離開」——結算選單重複呼叫 Show() 疑似打斷了它自己的載入流程，改成只在視窗真的不可見時才呼叫。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/okaminico/AutoDuty-1",
@@ -125,9 +125,9 @@
     "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/DalamudPluginsTC/main/icons/AutoDuty.png",
     "Punchline": "自動跑本，解放雙手（台服修正版，修正巴哈姆特邂逅之章3卡住）。",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/okaminico/AutoDuty-1/releases/download/AutoDuty-v7.15.1.5-autosync/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/AutoDuty-1/releases/download/AutoDuty-v7.15.1.5-autosync/latest.zip",
-    "Changelog": "自動合併 ffxiv-tc-port/AutoDuty 上游更新（2026-09-05，同步到 tc-7.20）。上游已內建等同的「打完副本不會自動離開」修正，並多加一個逃生口避免極端情況卡到逾時，採用上游版本。"
+    "DownloadLinkInstall": "https://github.com/okaminico/AutoDuty-1/releases/download/AutoDuty-v7.15.1.6-autosync/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/AutoDuty-1/releases/download/AutoDuty-v7.15.1.6-autosync/latest.zip",
+    "Changelog": "自動合併 ffxiv-tc-port/AutoDuty 上游更新（2026-09-05）。"
   },
   {
     "Author": "okaminico (based on ffxiv-tc-port's fork of BossMod Reborn)",

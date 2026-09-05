@@ -59,7 +59,7 @@
     "Author": "okaminico (based on ffxiv-tc-port's fork of liza/Questionable)",
     "Name": "Questionable",
     "InternalName": "Questionable",
-    "AssemblyVersion": "7.15.0.10",
+    "AssemblyVersion": "7.15.0.11",
     "Description": "自動接取並完成任務，使用 navmesh 自動走路到任務座標並嘗試自動完成沿路的步驟(不含副本、單人任務、戰鬥)。\n\n本版本修正了「卡住時自動重新整理任務步驟」功能，新增「攻頂乙太水晶連續中斷重試 3 次後微幅調整位置」，把移動卡住的反應時間從寫死 5 秒改成可調、預設 2.5 秒，補回官方上游有、但台服版一直缺少的 477 個任務資料檔案，並補上其中 28 個釣魚任務步驟缺少的執行邏輯(需搭配 AutoHook 外掛)。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/okaminico/Questionable-1",
@@ -79,9 +79,9 @@
     "LoadPriority": 0,
     "Punchline": "自動完成任務的小助手(台服修正版，含卡住自動恢復)。",
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/okaminico/Questionable-1/releases/download/Questionable-v7.15.0.10-autosync/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/Questionable-1/releases/download/Questionable-v7.15.0.10-autosync/latest.zip",
-    "Changelog": "自動合併 ffxiv-tc-port/Questionable 上游更新（2026-09-05，同步到 tc-7.20）。上游已內建等同的 AutoHook 釣魚 IPC 與卡死重試修正，採用上游版本。"
+    "DownloadLinkInstall": "https://github.com/okaminico/Questionable-1/releases/download/Questionable-v7.15.0.11-autosync/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/Questionable-1/releases/download/Questionable-v7.15.0.11-autosync/latest.zip",
+    "Changelog": "修正「飛行途中對 NPC 互動」的問題：飛到目標上空但尚未降落就嘗試互動時，遊戲會回報「飛行中無法進行該操作」導致卡住。現在互動前若偵測到還在飛行中，會自動降落(必要時再下坐騎)後重試，不論哪個任務、哪個 NPC 都適用；另外補上任務 1554《王在頂端沉睡》兩個步驟原本遺漏的降落設定。"
   },
   {
     "Author": "okaminico (based on ffxiv-tc-port's fork of TataruPraise)",
@@ -133,8 +133,8 @@
     "Author": "okaminico (based on ffxiv-tc-port's fork of BossMod Reborn)",
     "Name": "Bossmod Reborn",
     "InternalName": "BossModReborn",
-    "AssemblyVersion": "7.15.0.66",
-    "Description": "提供 Boss 戰雷達、自動循環、冷卻計劃與 AI 功能，幫助您輕鬆應對各種 Boss 機制。\n\n本版本同步上游更新：新增 4 個舊 Shadowbringers 極神模組（Titania/Innocence/Hades/Warrior of Light）與新手指南多個模組；另含本 fork 專屬的極月讀(The Wreath of Snakes Extreme)模組，已修正滿月/新月站位機制沒有畫面警示的問題。",
+    "AssemblyVersion": "7.15.0.67",
+    "Description": "提供 Boss 戰雷達、自動循環、冷卻計劃與 AI 功能，幫助您輕鬆應對各種 Boss 機制。\n\n本版本同步上游更新：新增 4 個舊 Shadowbringers 極神模組（Titania/Innocence/Hades/Warrior of Light）與新手指南多個模組；另含本 fork 專屬的極月讀(The Wreath of Snakes Extreme)模組，已修正 boss OID 錯誤導致模組完全沒載入的問題，滿月/新月站位機制已用實機 replay 驗證正確，其餘機制的技能資料仍待重新核對。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/okaminico/BossmodReborn",
     "DalamudApiLevel": 13,
@@ -150,8 +150,8 @@
     "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/DalamudPluginsTC/main/icons/BossModReborn.png",
     "Punchline": "不再因副本機制失誤（台服修正版，新增 E4S 泰坦、極月讀模組）",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/okaminico/BossmodReborn/releases/download/BossModReborn-v7.15.0.66-twfix/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/BossmodReborn/releases/download/BossModReborn-v7.15.0.66-twfix/latest.zip",
-    "Changelog": "修正極月讀滿月/新月站位機制：狀態 ID 已用實機截圖確認正確，但原本只餵給 AI 自動走位，畫面上完全沒有危險區警示——已補上畫面標示。另同步上游更新：新增 4 個舊極神模組（Titania/Innocence/Hades/Warrior of Light）與新手指南模組，E4S 泰坦改用上游版本（含正確台服 GroupID）。"
+    "DownloadLinkInstall": "https://github.com/okaminico/BossmodReborn/releases/download/BossModReborn-v7.15.0.67-twfix/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/BossmodReborn/releases/download/BossModReborn-v7.15.0.67-twfix/latest.zip",
+    "Changelog": "修正極月讀 boss 本體 OID 寫錯（實機 replay 確認應為 0x2211，原本 0x2210），導致模組從頭到尾都沒載入過——不是機制沒抓到，是完全沒進場。滿月/新月站位機制的狀態 ID(1538/1539)已用同一份 replay 核對正確。⚠️ 其餘技能 ID 跟實測紀錄對不上，尚未重新核對，除了滿月/新月機制外其他提示暫不保證準確。另同步上游更新：新增 4 個舊極神模組（Titania/Innocence/Hades/Warrior of Light）與新手指南模組，E4S 泰坦改用上游版本。"
   }
 ]

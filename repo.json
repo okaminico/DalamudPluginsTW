@@ -133,7 +133,7 @@
     "Author": "okaminico (based on ffxiv-tc-port's fork of BossMod Reborn)",
     "Name": "Bossmod Reborn",
     "InternalName": "BossModReborn",
-    "AssemblyVersion": "7.15.0.67",
+    "AssemblyVersion": "7.15.0.68",
     "Description": "提供 Boss 戰雷達、自動循環、冷卻計劃與 AI 功能，幫助您輕鬆應對各種 Boss 機制。\n\n本版本同步上游更新：新增 4 個舊 Shadowbringers 極神模組（Titania/Innocence/Hades/Warrior of Light）與新手指南多個模組；另含本 fork 專屬的極月讀(The Wreath of Snakes Extreme)模組，已修正 boss OID 錯誤導致模組完全沒載入的問題，滿月/新月站位機制已用實機 replay 驗證正確，其餘機制的技能資料仍待重新核對。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/okaminico/BossmodReborn",
@@ -150,8 +150,8 @@
     "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/DalamudPluginsTC/main/icons/BossModReborn.png",
     "Punchline": "不再因副本機制失誤（台服修正版，新增 E4S 泰坦、極月讀模組）",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/okaminico/BossmodReborn/releases/download/BossModReborn-v7.15.0.67-twfix/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/BossmodReborn/releases/download/BossModReborn-v7.15.0.67-twfix/latest.zip",
-    "Changelog": "修正極月讀 boss 本體 OID 寫錯（實機 replay 確認應為 0x2211，原本 0x2210），導致模組從頭到尾都沒載入過——不是機制沒抓到，是完全沒進場。滿月/新月站位機制的狀態 ID(1538/1539)已用同一份 replay 核對正確。⚠️ 其餘技能 ID 跟實測紀錄對不上，尚未重新核對，除了滿月/新月機制外其他提示暫不保證準確。另同步上游更新：新增 4 個舊極神模組（Titania/Innocence/Hades/Warrior of Light）與新手指南模組，E4S 泰坦改用上游版本。"
+    "DownloadLinkInstall": "https://github.com/okaminico/BossmodReborn/releases/download/BossModReborn-v7.15.0.68-twfix/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/BossmodReborn/releases/download/BossModReborn-v7.15.0.68-twfix/latest.zip",
+    "Changelog": "極月讀再修正 3 個技能 ID（用實機 replay 核對過）：責難、不動三段 x2、百月光。加上前一版修好的 boss OID 錯誤與滿月/新月站位機制，目前已核對正確的機制：全屏警告(責難)、地板圈型AOE(百月光)、錐形AOE(不動三段)、滿月/新月站位。⚠️ 其餘技能（月下彼岸花、極月讀大招、深宵換裝、月時雨、月之碎片）實測紀錄對不上任何現有程式碼，尚未加入。另同步上游更新：新增 4 個舊極神模組與新手指南模組。"
   }
 ]

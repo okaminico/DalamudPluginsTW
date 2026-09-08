@@ -133,8 +133,8 @@
     "Author": "okaminico (based on ffxiv-tc-port's fork of BossMod Reborn)",
     "Name": "Bossmod Reborn",
     "InternalName": "BossModReborn",
-    "AssemblyVersion": "7.15.0.70",
-    "Description": "提供 Boss 戰雷達、自動循環、冷卻計劃與 AI 功能，幫助您輕鬆應對各種 Boss 機制。\n\n本版本同步上游更新：新增 4 個舊 Shadowbringers 極神模組（Titania/Innocence/Hades/Warrior of Light）與新手指南多個模組；另含本 fork 專屬的極月讀(The Wreath of Snakes Extreme)模組，已修正 boss OID 錯誤導致模組完全沒載入的問題，滿月/新月站位機制已用實機 replay 驗證正確，其餘機制的技能資料仍待重新核對。",
+    "AssemblyVersion": "7.15.0.71",
+    "Description": "提供 Boss 戰雷達、自動循環、冷卻計劃與 AI 功能，幫助您輕鬆應對各種 Boss 機制。\n\n本版本同步上游更新，並新增本 fork 專屬的極 火龍狩獵戰(Ex5Rathalos)模組：天空王者(King of the Skies)全畫面即死機制的躲避判定（依加魯拉屍體位置/朝向計算安全區）、加魯拉與尾巴優先擊殺、可調血量門檻的刷鱗片模式。這個模組仍在實機測試調整中，天空王者躲避判定尚未完全確認每次都準確，之後如有問題會再出修正版。另含之前的極月讀(The Wreath of Snakes Extreme)模組。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/okaminico/BossmodReborn",
     "DalamudApiLevel": 13,
@@ -150,8 +150,8 @@
     "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/DalamudPluginsTC/main/icons/BossModReborn.png",
     "Punchline": "不再因副本機制失誤（台服修正版，新增 E4S 泰坦、極月讀模組）",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/okaminico/BossmodReborn/releases/download/BossModReborn-v7.15.0.70-autosync/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/BossmodReborn/releases/download/BossModReborn-v7.15.0.70-autosync/latest.zip",
-    "Changelog": "自動合併 ffxiv-tc-port/BossmodReborn 上游更新（2026-09-07）。"
+    "DownloadLinkInstall": "https://github.com/okaminico/BossmodReborn/releases/download/v7.15.0.71/BossModReborn.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/BossmodReborn/releases/download/v7.15.0.71/BossModReborn.zip",
+    "Changelog": "新增極 火龍狩獵戰(Ex5Rathalos)模組：天空王者躲避判定、加魯拉/尾巴優先擊殺、可調血量門檻的刷鱗片模式（2026-09-09，實機測試調整中）。"
   }
 ]

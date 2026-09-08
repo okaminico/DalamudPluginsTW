@@ -59,8 +59,8 @@
     "Author": "okaminico (based on ffxiv-tc-port's fork of liza/Questionable)",
     "Name": "Questionable",
     "InternalName": "Questionable",
-    "AssemblyVersion": "7.15.0.15",
-    "Description": "自動接取並完成任務，使用 navmesh 自動走路到任務座標並嘗試自動完成沿路的步驟(不含副本、單人任務、戰鬥)。\n\n本版本修正了「卡住時自動重新整理任務步驟」功能，新增「攻頂乙太水晶連續中斷重試 3 次後微幅調整位置」，把移動卡住的反應時間從寫死 5 秒改成可調、預設 2.5 秒，補回官方上游有、但台服版一直缺少的 477 個任務資料檔案，並補上其中 28 個釣魚任務步驟缺少的執行邏輯(需搭配 AutoHook 外掛)。",
+    "AssemblyVersion": "7.20.0.67",
+    "Description": "自動接取並完成任務，使用 navmesh 自動走路到任務座標並嘗試自動完成沿路的步驟(不含副本、單人任務、戰鬥)。\n\n本版本修正了「卡住時自動重新整理任務步驟」功能，新增「攻頂乙太水晶連續中斷重試 3 次後微幅調整位置」，把移動卡住的反應時間從寫死 5 秒改成可調、預設 2.5 秒，補回官方上游有、但台服版一直缺少的 477 個任務資料檔案，並補上其中 28 個釣魚任務步驟缺少的執行邏輯(需搭配 AutoHook 外掛)。\n\n本版本另修正：互動觸發進入單人任務副本時，短暫的事件旗標閃動會被誤判成「被打斷」，導致卡在互動物件前反覆重跑同一步驟(原地跑步)的問題。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/okaminico/Questionable-1",
     "Tags": [
@@ -79,9 +79,9 @@
     "LoadPriority": 0,
     "Punchline": "自動完成任務的小助手(台服修正版，含卡住自動恢復)。",
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/okaminico/Questionable-1/releases/download/Questionable-v7.15.0.15-autosync/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/Questionable-1/releases/download/Questionable-v7.15.0.15-autosync/latest.zip",
-    "Changelog": "自動合併 ffxiv-tc-port/Questionable 上游更新（2026-09-08）。"
+    "DownloadLinkInstall": "https://github.com/okaminico/Questionable-1/releases/download/v7.20.0.67/Questionable.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/Questionable-1/releases/download/v7.20.0.67/Questionable.zip",
+    "Changelog": "修正物件互動觸發進入單人任務副本時，被誤判打斷導致卡在互動物件前原地重跑的問題（2026-09-09）。"
   },
   {
     "Author": "okaminico (based on ffxiv-tc-port's fork of TataruPraise)",

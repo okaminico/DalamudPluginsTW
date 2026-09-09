@@ -87,7 +87,7 @@
     "Author": "okaminico (based on ffxiv-tc-port's fork of TataruPraise)",
     "Name": "塔塔露誇獎",
     "InternalName": "TataruPraise",
-    "AssemblyVersion": "7.20.0.7",
+    "AssemblyVersion": "7.20.0.8",
     "Description": "遊戲裡發生事情的時候，用塔塔露的聲音喊一句極短的提示——「完美收工！」「後面！」「排到了！」。不是要太多對話，只是要有聲音。每個情境一句、全部 8 個字以內，情境有副本完成／升等／登入／Gil 里程碑／血量低／背後有人／收到密語／副本排到／組隊邀請／交易請求等，各自獨立開關（預設全部關閉）。播的是事先合成好的語音檔，執行期完全不連網。語音來自本機的 GPT-SoVITS 橋接（預設 http://127.0.0.1:9882），沒有橋接就只是不出聲，不會卡遊戲。設定視窗可以直接編輯每個情境的短句；資訊列上有一格，點一下切換總開關。指令 /tataru 開啟設定視窗，/tataru test 試播一句。\n\n本版本修正了離開等級壓制的副本／大型任務時，明明只是恢復原本等級卻被誤判成升等而喊出語音的問題。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/okaminico/TataruPraise",
@@ -105,9 +105,9 @@
     "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/DalamudPluginsTC/main/icons/TataruPraise.png",
     "Punchline": "遊戲裡有事發生就喊一句極短提示（台服修正版，修正等級壓制誤判升等）。",
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/okaminico/TataruPraise/releases/download/TataruPraise-v7.20.0.7-autosync/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/TataruPraise/releases/download/TataruPraise-v7.20.0.7-autosync/latest.zip",
-    "Changelog": "自動合併 ffxiv-tc-port/TataruPraise 上游更新（2026-09-08）。"
+    "DownloadLinkInstall": "https://github.com/okaminico/TataruPraise/releases/download/TataruPraise-v7.20.0.8-autosync/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/TataruPraise/releases/download/TataruPraise-v7.20.0.8-autosync/latest.zip",
+    "Changelog": "自動合併 ffxiv-tc-port/TataruPraise 上游更新（2026-09-09）。"
   },
   {
     "Author": "okaminico (based on ffxiv-tc-port's fork of AutoDuty)",

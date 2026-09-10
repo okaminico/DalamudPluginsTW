@@ -133,7 +133,7 @@
     "Author": "okaminico (based on ffxiv-tc-port's fork of BossMod Reborn)",
     "Name": "Bossmod Reborn",
     "InternalName": "BossModReborn",
-    "AssemblyVersion": "7.20.0.122",
+    "AssemblyVersion": "7.20.0.125",
     "Description": "提供 Boss 戰雷達、自動循環、冷卻計劃與 AI 功能，幫助您輕鬆應對各種 Boss 機制。\n\n本版本同步上游更新，並含本 fork 專屬模組：\n・E4S 泰坦(伊甸零式希望樂園 覺醒之章4)：已依大量實機 replay 調整。地板圈/邪土/炸彈/巨石/斷層線/擊退等機制的自動閃避判定已逐一比對修正；場地改為圓形；相位結構重整。仍在調整中——極大泰坦(P2/P3)相位尚無實機資料、餘波中段與部分機制未完全建模。此模組為 WIP 狀態，需在 BMR 設定把「Minimal maturity」調到 WIP 才會載入。\n・極 火龍狩獵戰(Ex5Rathalos)：天空王者全畫面即死躲避、加魯拉/尾巴優先擊殺、可調血量門檻刷鱗片。\n・極月讀(The Wreath of Snakes Extreme)。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/okaminico/BossmodReborn",
@@ -150,8 +150,8 @@
     "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/DalamudPluginsTC/main/icons/BossModReborn.png",
     "Punchline": "不再因副本機制失誤（台服修正版，新增 E4S 泰坦、極月讀模組）",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/okaminico/BossmodReborn/releases/download/v7.20.0.122/BossModReborn.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/BossmodReborn/releases/download/v7.20.0.122/BossModReborn.zip",
-    "Changelog": "E4S 泰坦:依大量實機 replay 大幅修正——場地改圓形(閃招不再墜崖)、擊退距離修正、炸彈半徑放大、斷層線/落石/邪土餘波閃避、相位結構重整、技能 ID 對照 cactbot 重標。此模組為 WIP,需把 BMR 設定的 Minimal maturity 調到 WIP。(2026-09-10)"
+    "DownloadLinkInstall": "https://github.com/okaminico/BossmodReborn/releases/download/v7.20.0.125/BossModReborn.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/BossmodReborn/releases/download/v7.20.0.125/BossModReborn.zip",
+    "Changelog": "E4S: 修 AI 在 P2/花崗石牢卡死（震級5.0 誤觸禁區）（2026-09-10）"
   }
 ]

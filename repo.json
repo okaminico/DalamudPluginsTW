@@ -3,7 +3,7 @@
     "Author": "okaminico (based on ffxiv-tc-port's fork of NightmareXIV/Lifestream)",
     "Name": "Lifestream",
     "InternalName": "Lifestream",
-    "AssemblyVersion": "7.15.0.6",
+    "AssemblyVersion": "7.15.0.7",
     "Description": "- 一鍵傳送至任何世界或以太之光目的地\n- 點擊區域地圖上的以太之光即可傳送過去\n\n本版本修正了台服(TC)無法正確解析以太之光目的地名稱的問題。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/okaminico/Lifestream-1",
@@ -23,9 +23,9 @@
     "LoadPriority": 0,
     "Punchline": "加速以太之光移動與跨世界旅行的插件(台服修正版)。",
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/okaminico/Lifestream-1/releases/download/Lifestream-v7.15.0.6-autosync/latest.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/Lifestream-1/releases/download/Lifestream-v7.15.0.6-autosync/latest.zip",
-    "Changelog": "自動合併 ffxiv-tc-port/Lifestream 上游更新（2026-09-07）。"
+    "DownloadLinkInstall": "https://github.com/okaminico/Lifestream-1/releases/download/Lifestream-v7.15.0.7-autosync/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/Lifestream-1/releases/download/Lifestream-v7.15.0.7-autosync/latest.zip",
+    "Changelog": "自動合併 ffxiv-tc-port/Lifestream 上游更新（2026-09-10）。"
   },
   {
     "Author": "okaminico (based on ffxiv-tc-port's fork of Infiziert90/NotificationMaster)",

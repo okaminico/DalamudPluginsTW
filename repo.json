@@ -133,7 +133,7 @@
     "Author": "okaminico (based on ffxiv-tc-port's fork of BossMod Reborn)",
     "Name": "Bossmod Reborn",
     "InternalName": "BossModReborn",
-    "AssemblyVersion": "7.20.0.116",
+    "AssemblyVersion": "7.20.0.117",
     "Description": "提供 Boss 戰雷達、自動循環、冷卻計劃與 AI 功能，幫助您輕鬆應對各種 Boss 機制。\n\n本版本同步上游更新，並新增本 fork 專屬的極 火龍狩獵戰(Ex5Rathalos)模組：天空王者(King of the Skies)全畫面即死機制的躲避判定（依加魯拉屍體位置/朝向計算安全區）、加魯拉與尾巴優先擊殺、可調血量門檻的刷鱗片模式。這個模組仍在實機測試調整中，天空王者躲避判定尚未完全確認每次都準確，之後如有問題會再出修正版。另含之前的極月讀(The Wreath of Snakes Extreme)模組。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/okaminico/BossmodReborn",
@@ -150,8 +150,8 @@
     "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/DalamudPluginsTC/main/icons/BossModReborn.png",
     "Punchline": "不再因副本機制失誤（台服修正版，新增 E4S 泰坦、極月讀模組）",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/okaminico/BossmodReborn/releases/download/v7.20.0.116/BossModReborn.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/BossmodReborn/releases/download/v7.20.0.116/BossModReborn.zip",
-    "Changelog": "E4S 擊退:加 goal zone 把 AI 拉去貼 origin(不只是禁止站錯位)（2026-09-10）"
+    "DownloadLinkInstall": "https://github.com/okaminico/BossmodReborn/releases/download/v7.20.0.117/BossModReborn.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/BossmodReborn/releases/download/v7.20.0.117/BossModReborn.zip",
+    "Changelog": "E4S: 修 Pulse/Force of the Land 的 spread 永不清除(兩坦互相遠離)（2026-09-10）"
   }
 ]

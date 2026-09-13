@@ -55,8 +55,8 @@
     "IconUrl": "https://raw.githubusercontent.com/FFXIV-CombatReborn/RebornAssets/main/IconAssets/RSR_Icon.png",
     "Punchline": "Analyses combat information every frame and finds the best action.",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/okaminico/RotationSolverReborn/releases/download/v7.3.8.30/RotationSolver.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/RotationSolverReborn/releases/download/v7.3.8.30/RotationSolver.zip",
+    "DownloadLinkInstall": "https://github.com/okaminico/RotationSolverReborn/releases/download/v7.3.8.30/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/RotationSolverReborn/releases/download/v7.3.8.30/latest.zip",
     "Changelog": "Official build from tw13 branch."
   },
   {
@@ -75,8 +75,8 @@
     "IconUrl": "https://love.puni.sh/resources/pandora.png",
     "Punchline": "Do you dare to open Pandora's Box?",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/okaminico/PandorasBox/releases/download/v1.6.3.21/PandorasBox.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/PandorasBox/releases/download/v1.6.3.21/PandorasBox.zip",
+    "DownloadLinkInstall": "https://github.com/okaminico/PandorasBox/releases/download/v1.6.3.21/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/PandorasBox/releases/download/v1.6.3.21/latest.zip",
     "Changelog": "Official build from tw13 branch."
   },
   {
@@ -95,8 +95,8 @@
     "IconUrl": "https://i.imgur.com/AVSzkMB.png",
     "Punchline": "Yet another tweaks collection plugin.",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/okaminico/ffxiv-bundleoftweaks/releases/download/v69.109/Automaton.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/ffxiv-bundleoftweaks/releases/download/v69.109/Automaton.zip",
+    "DownloadLinkInstall": "https://github.com/okaminico/ffxiv-bundleoftweaks/releases/download/v69.109/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/ffxiv-bundleoftweaks/releases/download/v69.109/latest.zip",
     "Changelog": "Official build from tw13 branch."
   }
 ]

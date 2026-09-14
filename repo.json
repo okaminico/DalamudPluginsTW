@@ -3,7 +3,7 @@
     "Author": "okaminico (based on ffxiv-tc-port's fork of AutoDuty)",
     "Name": "AutoDuty",
     "InternalName": "AutoDuty",
-    "AssemblyVersion": "7.20.0.80",
+    "AssemblyVersion": "7.20.0.81",
     "Description": "自動幫你跑副本，支援信賴的同伴、達人指引、士官兵團、多變或一般模式。需搭配 BossModReborn、vnavmesh 與一款戰鬥循環插件（WrathCombo 或 BossMod AutoRotation）使用。",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/okaminico/AutoDuty-1",
@@ -15,9 +15,9 @@
     "IconUrl": "https://raw.githubusercontent.com/ffxiv-tc-port/DalamudPluginsTC/main/icons/AutoDuty.png",
     "Punchline": "自動跑本，解放雙手（台服修正版）。",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/okaminico/AutoDuty-1/releases/download/v7.20.0.80/AutoDuty.zip",
-    "DownloadLinkUpdate": "https://github.com/okaminico/AutoDuty-1/releases/download/v7.20.0.80/AutoDuty.zip",
-    "Changelog": "修正黃金谷/塔姆塔拉拖怪、王的寶箱不開、PathAction.Name dead code、Gearsetter IPC 型別錯誤等一批 bug。合併上游 tc-7.20 最新 39 個 commit。"
+    "DownloadLinkInstall": "https://github.com/okaminico/AutoDuty-1/releases/download/v7.20.0.81/AutoDuty.zip",
+    "DownloadLinkUpdate": "https://github.com/okaminico/AutoDuty-1/releases/download/v7.20.0.81/AutoDuty.zip",
+    "Changelog": "修正戰鬥後 CheckFinishing 誤判未完成、白等 60 秒才退本的問題(路徑最後一步是 MoveTo、或互動主動放棄時 Action 沒清空);修正進戰鬥後卡在 Waiting For Combat、BossMod AI 沒被武裝的問題。"
   },
   {
     "Author": "okaminico (based on ffxiv-tc-port's fork of BossModReborn)",
